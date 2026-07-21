@@ -1,0 +1,33 @@
+/* src/styles/variables.css
+   ألوان النظام، الخطوط، المتغيرات العامة، وإعدادات الهوية البصرية لمنصة مسعف */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* الهوية اللونية */
+  --musaef-navy: #111e2f;
+  --musaef-navy-light: #1b2c44;
+  --musaef-red: #d62829;
+  --musaef-red-dark: #b81f20;
+  --musaef-page-bg: #f6f6f8;
+  --musaef-border: #e7e8ec;
+  --musaef-muted: #8a8f98;
+  --musaef-text: #1c1c1e;
+
+  /* إعادة تعريف متغيرات Bootstrap الأساسية لتوحيد الهوية البصرية */
+  --bs-primary: var(--musaef-red);
+  --bs-primary-rgb: 214, 40, 41;
+  --bs-body-font-family: 'Cairo', sans-serif;
+  --bs-body-color: var(--musaef-text);
+  --bs-body-bg: var(--musaef-page-bg);
+  --bs-border-radius: 10px;
+  --bs-border-radius-lg: 14px;
+
+  --musaef-radius-lg: 28px;
+  --musaef-radius-md: 12px;
+  --musaef-shadow: 0 20px 45px -20px rgba(17, 30, 47, 0.25);
+}
+
+html, body {
+  font-family: 'Cairo', sans-serif;
+}
