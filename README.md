@@ -1,132 +1,52 @@
-# 🩸 منصة مسعف | Musaef Platform
+# 🩸 Musaef Platform | منصة مسعف
 
-**مسعف** هي منصة رقمية واعدة تهدف إلى تسهيل وتنظيم عملية التبرع بالدم وربط المتبرعين بالمحتاجين والمستشفيات في أوقات الطوارئ بطريقة ذكية وسريعة.
-
----
-
-## 🌟 مميزات المنصة
-
-- ⚡ **استجابة سريعة:** ربط فوري بين المتبرع والمحتاج وقت الطوارئ.
-- 🩸 **دليل فصائل الدم:** جدول توضيحي متكامل لبيان توافق الفصائل عند التبرع والاستقبال.
-- 🏥 **الربط مع المستشفيات:** متابعة طلبات التبرع والحالات العاجلة في المراكز والمستشفيات.
-- 🔒 **أمن وموثوقية:** سرية كاملة لبيانات المتبرعين والمستفيدين.
+**Musaef** is a promising digital ecosystem designed to streamline and organize the blood donation process. It connects donors with patients and hospitals in real time during critical medical emergencies using smart and rapid workflows.
 
 ---
 
-## 📸 صور من الواجهات (Screenshots)
+## 🌟 Key Features
 
-### 1. الصفحة الرئيسية (Home Page)
-![الصفحة الرئيسية](./src/assets/screenshots/01-home-page.jpeg)
-
-### 2. عن المنصة (About Us)
-![من نحن](./src/assets/screenshots/02-about-us.jpeg)
-
-### 3. دليل التبرع وتوافق الفصائل (Donation Guide)
-![دليل التبرع](./src/assets/screenshots/03-donation-guide.jpeg)
-
-### 4. إنشاء حساب جديد (Sign Up)
-![إنشاء حساب](./src/assets/screenshots/04-signup-page.jpeg)
-
-### 5. تسجيل الدخول (Login)
-![تسجيل الدخول](./src/assets/screenshots/05-login-page.jpeg)
+- ⚡ **Rapid Emergency Response:** Instant matching and connection between donors and recipients during critical situations.
+- 🩸 **Blood Compatibility Guide:** Comprehensive reference matrix detailing blood type compatibility for safe donation and reception.
+- 🏥 **Hospital Integration:** Real-time tracking and management of emergency blood requests across healthcare centers and hospitals.
+- 🔒 **Security & Privacy:** Full confidentiality and protection for donor and recipient personal data.
 
 ---
 
-## 🛠️ التقنيات المستخدمة (Tech Stack)
+## 📸 Interface Screenshots
 
-- **Frontend:** Vue.js / HTML5 / CSS3 / JavaScript
+### 1. Home Page
+![Home Page](./src/assets/screenshots/01-home-page.jpeg)
+
+### 2. About Us
+![About Us](./src/assets/screenshots/02-about-us.jpeg)
+
+### 3. Donation Guide & Compatibility Matrix
+![Donation Guide](./src/assets/screenshots/03-donation-guide.jpeg)
+
+### 4. Sign Up
+![Sign Up](./src/assets/screenshots/04-signup-page.jpeg)
+
+### 5. Login Page
+![Login](./src/assets/screenshots/05-login-page.jpeg)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework:** Vue.js 3 / Vite / HTML5 / CSS3 / JavaScript
+- **State Management & Routing:** Pinia / Vue Router
+- **UI & Styling:** Bootstrap 5 / Custom CSS Variables
+- **Localization:** Vue I18n (Dynamic RTL/LTR Support for Arabic & English)
 - **Version Control:** Git & GitHub
 
 ---
 
-## 🚀 طريقة التشغيل المباشر (Setup & Run)
+## 🚀 Setup & Local Development
 
-1. **استنساخ المشروع (Clone):**
-   ```bash
-   git clone [https://github.com/atya10/musaef-platform.git](https://github.com/atya10/musaef-platform.git)
+This project requires **Node.js (v18 or higher)**.
 
-
-# مسعف (Musaef) — الواجهة الأمامية
-
-منصة ذكية لربط المتبرعين بالمحتاجين وتسهيل التبرع بالدم في وقت الطوارئ.
-هذه الواجهة الأمامية مبنية باستخدام **Vue 3 + Vite**، مع **Bootstrap 5** للتنسيقات
-والمكوّنات، و **Pinia** لإدارة الحالة، و **Vue Router** للتنقل، و **Vue I18n** لدعم
-اللغتين العربية والإنجليزية — وفق نفس الهيكلية الهندسية الموضحة في وثيقة
-"الهيكلية الهندسية الشاملة للواجهة الأمامية".
-
-## التشغيل محلياً
-
-يتطلب المشروع Node.js (الإصدار 18 أو أحدث). داخل مجلد المشروع:
-
+### 1. Clone the Repository:
 ```bash
-npm install
-npm run dev
-```
-
-سيفتح المشروع تلقائياً على `http://localhost:5173`.
-
-للبناء النهائي (Production Build):
-
-```bash
-npm run build
-npm run preview   # لمعاينة نسخة البناء محلياً
-```
-
-## هيكلية المشروع
-
-المشروع منظم بنفس الطريقة الموضحة في وثيقة الهيكلية الهندسية:
-
-```
-src/
-  api/           ← الاتصال بالواجهة الخلفية (Axios) — axios.js, auth.js, donor.js...
-  stores/        ← إدارة الحالة المركزية (Pinia) — authStore, donorStore...
-  composables/   ← منطق العمل بعيداً عن الواجهة — useAuth, useEmergency...
-  layouts/       ← القوالب العامة — AuthLayout, PublicLayout, DonorLayout...
-  router/        ← تعريف المسارات وحمايتها (index.js)
-  views/         ← صفحات النظام مقسّمة حسب نوع المستخدم (public/donor/hospital/admin/common)
-  components/    ← مكوّنات قابلة لإعادة الاستخدام (common/auth/donor/hospital/admin/charts/maps)
-  locales/       ← ملفات الترجمة (ar.json, en.json) وإعداد Vue I18n
-  utils/         ← دوال وثوابت مساعدة (فصائل الدم، التواريخ، إلخ)
-  styles/        ← الهوية البصرية (variables.css, main.css, responsive.css)
-  assets/images/ ← صور المشروع (الشعار، الأيقونة، الصور التوضيحية)
-```
-
-## ⚠️ ملاحظة مهمة: وضع المحاكاة (Mock Mode)
-
-**لا يوجد حالياً خادم خلفي (Backend) فعلي مرتبط بالمشروع.** لهذا السبب:
-
-- كل ملفات `src/stores/*.js` تعمل بوضع `MOCK_MODE = true` افتراضياً: بيانات
-  تجريبية ثابتة (يمكنك تعديلها مباشرة داخل كل ملف Store).
-- تسجيل الدخول في `authStore.js` يقبل **أي بريد إلكتروني وكلمة مرور** ويُنشئ
-  جلسة دخول وهمية — هذا لأغراض تصفح الواجهات فقط، **وليس مصادقة حقيقية**.
-- في صفحة تسجيل الدخول (`AuthPage.vue`) أضفنا أزرار "دخول تجريبي كـ: متبرع /
-  مستشفى / إدارة" لتسهيل تصفح لوحات التحكم الثلاث دون الحاجة لتسجيل حساب.
-- ملفات `src/api/*.js` جاهزة وتحتوي على الاستدعاءات الصحيحة (axios) بالشكل الذي
-  يتوقعه خادم Laravel — بمجرد جهوزية الخادم الفعلي، فقط:
-  1. عدّل `VITE_API_BASE_URL` في ملف `.env` (أنشئه إذا لم يكن موجوداً) ليشير إلى
-     عنوان الخادم الحقيقي.
-  2. غيّر `MOCK_MODE` إلى `false` في كل ملف داخل `src/stores/`.
-
-لا حاجة لتغيير أي شيء آخر — الواجهة مبنية بحيث يكون الانتقال لخادم حقيقي بهذه
-الخطوتين فقط، دون إعادة كتابة أي مكوّن أو صفحة.
-
-## الصور المستخدمة
-
-جميع الصور الست التي أرسلتها موجودة في `src/assets/images/` بأسماء واضحة:
-
-| الملف | الاستخدام |
-|---|---|
-| `logo-full.jpg` | الشعار الكامل في الهيدر والسايدبار |
-| `drop-icon.png` | أيقونة القطرة الصغيرة الثابتة أعلى صفحات المصادقة |
-| `hero-photo.jpg` | صورة المتبرع/الإسعاف في صفحات تسجيل الدخول وإنشاء الحساب |
-| `drop-hero.jpg` | قطرة الدم بالهيرو في الصفحة الرئيسية |
-| `ai-doctor.jpg` | صورة الطبيب بالذكاء الاصطناعي في قسم "من نحن" |
-| `blood-types.jpg` | صورة فصائل الدم في صفحة دليل التبرع |
-
-## نقاط يُنصح بتطويرها لاحقاً
-
-- ربط `src/components/charts/SimpleBarChart.vue` بمكتبة رسوم بيانية حقيقية
-  (مثل Chart.js) عند الحاجة لمخططات أكثر تقدماً.
-- ربط `src/components/maps/MapPlaceholder.vue` بمكتبة خرائط حقيقية (مثل
-  Leaflet أو Google Maps) لعرض مواقع المستشفيات والنداءات الطارئة فعلياً.
-- إضافة اختبارات (Unit/E2E) عند الرغبة بذلك.
+git clone [https://github.com/atya10/musaef-platform.git](https://github.com/atya10/musaef-platform.git)
+cd musaef-platform
